@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contacto</h1>
+
+        <form>
+            <!--
+                label -> Rotulos
+                input -> Cajones para cargar informacion
+                textarea -> Son como inputs pero para dejar comentarios
+                select -> Desplegable para mostrar opciones
+                    -> option -> Mostrar una opcion puntual en el desplegable
+            -->
+            
+            <!-- <label>Username: <input type="text"></label> -->
+            <input type="text" placeholder="Username">
+            <br>
+            <input type="email" placeholder="Email">
+            <br>
+            <input type="password" placeholder="Password">
+            <br>
+            <input type="date">
+            <br>
+            <input type="file">
+            <br>
+            <input type="time">
+            <br>
+            <input type="checkbox">
+            <br>
+            <input type="checkbox">
+            <br>
+            <input type="checkbox">
+            <br>
+            <input type="checkbox">
+            <br>
+            <label for="">Genero</label>
+            <br>
+            <label>Masculino<input type="radio" name="genero" checked></label>
+            <label>Femenino<input type="radio" name="genero"></label>
+            <label>Otros<input type="radio" name="genero"></label>
+            <br>
+            <textarea cols="30" rows="10"></textarea>
+            <br>
+            <select>
+                <option value="">-- Seleccionar --</option>
+                <option value="humano">Humano</option>
+                <option value="elfo">Elfo</option>
+                <option value="orco">Orco</option>
+                <option value="enano">Enano</option>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>
+
