@@ -10,10 +10,12 @@
 */
 
 
-
-
 /* div {
     height: 200px;
     width: 200px;
     background-color: hsl(0, 100%, 0%);
 } */
+
+div {
+    color: #844210;
+}
