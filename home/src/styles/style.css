@@ -1,45 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
+/*********** CUSTOM PROPERTIES **********/
+:root {
+  --primary-color: #55a455;
+  --primary-alpha-color: #55a45580;
+  --secondary-color: #785f44;
+  --white-color: #ffffff;
+  --primary-font: "Poller One", curisve;
+}
 
-<body>
-    <header>
-        <div class="nav_container">
-            <!----------- LOGO ---------->
-            <a href="#" class="logo">
-                <img src="https://www.pngmart.com/files/12/Star-Wars-Master-Yoda-PNG-Photo.png" alt="Yoda the Jedi">
-                <h2>Yoda</h2>
-            </a>
+/*********** RESET **********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px; /* El valor base de los REM */
+}
+body {
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+  background-image: url("https://wallpapercave.com/wp/wp6850352.jpg");
+}
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+h1 {
+  color: var(--white-color);
+}
 
-             <!----------- NAVIGATION ---------->
-            <nav class="nav_menu">
-                <a href="#" class="nav_item">Inicio</a>
-                <a href="#" class="nav_item">Bibliografia</a>
-                <a href="#" class="nav_item">Cronologia</a>
-                <a href="#" class="nav_item">Cosplays</a>
-                <a href="#" class="nav_item">Libros</a>
-            </nav>
-        </div>
-    </header>
+/*********** UTILITES ***********/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    font-family: var(--primary-font);
+    height: 3.3rem;
+    transition: 0.3s;
+    width: 200px;
+}
+.btn:hover {
+    background-color: var(--primary-alpha-color);
+}
 
-    <main>
-        <!----------- HOME ---------->
-        <section class="home">
-            <h1>Bienvenidos al <br> sitio de <span>Yoda</span></h1>
-            <a href="" class="btn">Clickeame</a>
-        </section>
+/*********** PAGE STYLES ***********/
+/******* NAVIGATION *******/ /* Usaremos CSS Nesting */
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5%;
+    position: fixed;
+    width: 100%;
 
-        <!----------- VH ---------->
-        <section class="vh"></section>
-    </main>
+    & .nav_logo  {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-    <script src="../scripts/nav_script.js"></script>
-</body>
+        & img {
+            width: 60px;
+        }
+    }
+    & .nav_menu {
+        display: flex;
+        gap: 50px;
 
-</html>
+        /* & .nav_item {
+
+        } */
+    }
+}
+
+/******* HOME *******/
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5%;
+
+    & h1 {
+        font-size: 5rem;
+    }
+    & span {
+        color: var(--primary-color);
+    }
+}
+
+/******* VH *******/
+.vh {
+    height: 100vh;
+    background-color: var(--white-color);
+}
